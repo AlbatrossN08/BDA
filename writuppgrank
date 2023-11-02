@@ -1,0 +1,22 @@
+'''
+PageRank is one of the many factors that Google uses to rank web pages, 
+but it is still one of the most important factors. A high PageRank score means that
+ a web page is considered to be authoritative and important, and it is more likely to rank higher in search results.
+Here is an example of how PageRank works:
+Imagine that there are two web pages, A and B.
+Page A has no links to it, but page B has a link to it.
+According to PageRank, page B is more important than page A, because it has a vote of support from another page.
+MapReduce is a programming model and an associated implementation for processing and generating large data sets with a parallel, 
+distributed algorithm on a cluster. A MapReduce program is composed of two main tasks:
+Map: The map task takes a set of input data and converts it into another set of data, where individual elements are broken down into tuples (key/value pairs).
+Reduce: The reduce task takes the output from a map as input and combines those data tuples into a smaller set of tuples.
+MapReduce Simulation: The code simulates the MapReduce model to calculate PageRank values. 
+It iteratively updates the PageRank values based on the web graph structure.
+
+Map Step: In the map step, the PageRank value is distributed through links. For each page i, it loops through all other pages j and
+ checks if there is a link from page j to page i (as indicated by adjacency_matrix[j, i] == 1). If there is a link, 
+ it adds a fraction of pagerank[j] to new_pagerank[i], divided by the number of outgoing links from page j.
+
+Reduce Step: In the reduce step, the PageRank values are combined. The PageRank values are multiplied by the 
+damping factor and then normalized by adding a constant term to handle dangling nodes (pages with no outgoing links).
+'''
