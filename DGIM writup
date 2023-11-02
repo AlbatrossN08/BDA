@@ -1,0 +1,20 @@
+'''The DGIM algorithm, which stands for "Datar-Gionis-Indyk-Motwani" after the names of its inventors, 
+is a method for estimating the count of 1s in a binary data stream. It's particularly useful when dealing
+ with data streams where you need to answer queries about the number of occurrences of a specific value 
+ (in this case, 1) within a sliding window.
+
+The key idea behind DGIM is to use a data structure called a "bucket" to represent a range of timestamps
+ (positions in the stream) and maintain a compact summary of the recent 1s in the stream. '''
+
+
+
+'''
+count = 0
+k = n
+while k > 1
+for j = k to n
+count = count + 1
+end for
+k = k/2
+end while
+'''
