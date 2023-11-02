@@ -1,0 +1,18 @@
+K-means is a widely used clustering algorithm in machine learning and data analysis. 
+It is an unsupervised learning technique that aims to partition a set of data points into K clusters,
+where each data point belongs to the cluster with the nearest mean, often referred to as the centroid. 
+The main objective of the K-means algorithm is to minimize the variance (sum of squared distances) within each cluster.
+
+MapReduce is a programming model and data processing technique used for distributed computing and parallel processing of large datasets.
+MapReduce is a programming model and an associated implementation for processing and generating large data sets with a parallel, 
+distributed algorithm on a cluster. A MapReduce program is composed of two main tasks:
+
+Map: The map task takes a set of input data and converts it into another set of data, where individual elements are broken down into tuples (key/value pairs).
+Reduce: The reduce task takes the output from a map as input and combines those data tuples into a smaller set of tuples.
+
+Map-Reduce Iteration: The K-means algorithm runs for a specified number of iterations. Each iteration consists of a map and reduce step.
+Map: In the map step, each data point is assigned to the closest centroid using the map_point_to_closest_centroid function.
+The Pool class is used to parallelize this operation, which can improve performance for large datasets.
+Reduce: In the reduce step, the centroids are updated based on the assigned data points. For each centroid, 
+you collect the data points that were assigned to it and compute the mean of those points to determine the new centroid.
+The reduce_cluster_points function is responsible for this.
